@@ -1,18 +1,37 @@
 
 //your parameter variables go here!
 
-let tailX = 139.5;
-let tailY = 91;
+let headX = 50 // moves the entire head and beack on X axis
+let headY = 90 // moves the entire head and beack on Y axis
 
-let headX = 50
-let headY = 90
+let headSize = 43 //width and height of the head, excluding beak
+let eyeSize = 10 // width and height of the eye
 
-let darkFeatherSize = 30
-let darkFeatherColour = 40
+let featherX = 105.5 // moves both the colourful and dark feathers on body X axis
+let featherY = 90 // moves both the colourful and dark feathers on body Y axis
 
-let lightCream = [219, 216, 189];
-let navy = [47, 61, 82]
-let darkPink = [88, 71, 92]
+let featherWidth = 68 // width of colourful body feathers
+let featherHeight = 62.5 //head of colourful body feathers
+
+let darkFeatherSize = 30 // width & height of the 5 small dark body feathers
+let darkFeatherColour = 40 // colour of all of the dark feathers (body & tail) & top of beak
+
+let featherArcStart = 90 // the degree where my body feather begin
+let featherArcEnd = 180 // the degree where my body feather end
+
+let tailX = 139.5; // the X point where the stright line tail feathers and the big tail on top starts from.
+let tailY = 91; // the Y point where the stright line tail feathers and the big tail on top starts from.
+
+let tailWidth = 140 // width of the tail
+let tailHeight = 150 // height of the tail
+
+let tailArcStart = 225 // the degree where the tail starts
+let tailArcEnd = 315 //the degree where the tail end
+
+let lightCream = [219, 216, 189]; // middle of the head, and the tail
+let navy = [47, 61, 82] // the head and one of the body wfathers
+let darkPink = [88, 71, 92] // the tail, and one of the feathers
+let bodyColour = [189, 184, 152] // the body and the bottom half of the beak
 
 
 
@@ -37,67 +56,73 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
+//shadow
+noStroke()
+fill(47, 94, 110)
+ellipse(105,176,80,20)
+
  //beak
 noStroke()
 fill(darkFeatherColour) 
 triangle(headX-20,headY-5,headX-20,headY,headX-35,headY) // beak top half
 
-fill(201, 190, 157); // cream-ish
+fill(bodyColour); 
 triangle(headX-20,headY,headX-20,headY+5,headX-35,headY) // beak bottom half
 
 //body
 
-fill(189, 184, 142); // yellow-ish
+fill(bodyColour); // yellow-ish
 arc(105, 90, 125, 125, 0, 180, PIE);
 
 //head
 
 fill(navy) 
-circle(headX,headY,43,43)
+circle(headX,headY,headSize,headSize)
 
 fill(lightCream)
-circle (headX,headY,30,30)
+circle (headX,headY,headSize-13,headSize-13)
 
 fill(navy) 
-circle(headX,headY,20,20)
-
-fill(255) //white 
-circle (headX,headY,10,10)
+circle(headX,headY,headSize-23,headSize-23)
 
 //eye
+
+fill(255) //white 
+circle (headX,headY,eyeSize,eyeSize)
+
 fill(0) //black
-circle (headX,headY,9.5,9.5)
+circle (headX,headY,eyeSize-0.5,eyeSize-0.5)
 
 fill(255) //white
-circle (headX-1.5,headY+1,3,3)
+circle (headX-1.5,headY+1,eyeSize/3,eyeSize/3)
 
 //feathers
 fill(74, 66, 60);  // brown
-arc(105.5, 90, 68, 62.5, 90, 180, PIE);
+arc(featherX, featherY, featherWidth, featherHeight, featherArcStart, featherArcEnd, PIE);
 
 fill(darkPink); 
-arc(105.5, 121.25, 68, 62.5, 90, 180, PIE);
+arc(featherX, featherY+31.25, featherWidth, featherHeight, featherArcStart, featherArcEnd, PIE);
 
 fill(99, 130, 104); // sage
-arc(139.5, 121.25, 68, 62.5, 90, 180, PIE);
+arc(featherX+34, featherY+31.25, featherWidth, featherHeight, featherArcStart, featherArcEnd, PIE);
 
 fill(navy); 
-arc(139.5, 90, 68, 62.5, 90, 180, PIE);
+arc(featherX+34, featherY, featherWidth, featherHeight, featherArcStart, featherArcEnd, PIE);
 
 fill(45, 64, 77); // dark teal
-arc(173.5, 90, 68, 62.5, 90, 180, PIE);
+arc(featherX+68, featherY, featherWidth, featherHeight, featherArcStart, featherArcEnd, PIE);
 
 //small feathers
 fill(darkFeatherColour)
-arc(105.5, 90, darkFeatherSize , darkFeatherSize , 90, 180, PIE);
+arc(featherX, featherY, darkFeatherSize , darkFeatherSize , featherArcStart, featherArcEnd, PIE);
 
-arc(105.5, 121.25, darkFeatherSize , darkFeatherSize , 90, 180, PIE);
+arc(featherX, featherY+31.25, darkFeatherSize , darkFeatherSize , featherArcStart, featherArcEnd, PIE);
 
-arc(139.5, 121.25, darkFeatherSize , darkFeatherSize , 90, 180, PIE);
+arc(featherX+34, featherY+31.25, darkFeatherSize , darkFeatherSize , featherArcStart, featherArcEnd, PIE);
 
-arc(139.5, 90, darkFeatherSize , darkFeatherSize , 90, 180, PIE);
+arc(featherX+34, featherY, darkFeatherSize , darkFeatherSize , featherArcStart, featherArcEnd, PIE);
 
-arc(173.5, 90, darkFeatherSize , darkFeatherSize , 90, 180, PIE);
+arc(featherX+68, featherY, darkFeatherSize , darkFeatherSize , featherArcStart, featherArcEnd, PIE);
 
 
 //black tail lines
@@ -124,7 +149,7 @@ line(tailX,tailY+27,tailX+34,tailY+27)
 
 line(tailX,tailY+30,tailX+37,tailY+30)
 
-// feet
+// legs
 
 strokeWeight(2)
 line(102,153,102,175)
@@ -135,29 +160,29 @@ line(108,153,108,175)
 noStroke()
 
 fill(lightCream)
-arc(tailX, tailY, 140, 150, 225, 315, PIE);
+arc(tailX, tailY, tailWidth, tailHeight, tailArcStart, tailArcEnd, PIE);
 
 fill(darkPink)
-arc(tailX, tailY-15, 125, 120, 225, 315, PIE);
+arc(tailX, tailY-15, tailWidth-15, tailHeight-30, tailArcStart, tailArcEnd, PIE);
 
 fill(lightCream)
-arc(tailX, tailY-30, 110, 90, 225, 315, PIE);
+arc(tailX, tailY-30, tailWidth-30, tailHeight-60, tailArcStart, tailArcEnd, PIE);
 
 fill(darkPink)
-arc(tailX, tailY-45, 95, 60, 225, 315, PIE);
+arc(tailX, tailY-45, tailWidth-45, tailHeight-90, tailArcStart, tailArcEnd, PIE);
 
 fill(lightCream)
-arc(tailX, tailY-60, 80, 30, 225, 315, PIE);
+arc(tailX, tailY-60, tailWidth-60, tailHeight-120, tailArcStart, tailArcEnd, PIE);
 
 fill(darkFeatherColour)
-arc(tailX, tailY, darkFeatherSize , darkFeatherSize , 225, 315, PIE);
+arc(tailX, tailY, darkFeatherSize , darkFeatherSize , tailArcStart, tailArcEnd, PIE);
 
-arc(tailX, tailY-15, darkFeatherSize , darkFeatherSize , 225, 315, PIE);
+arc(tailX, tailY-15, darkFeatherSize , darkFeatherSize , tailArcStart, tailArcEnd, PIE);
 
-arc(tailX, tailY-30, darkFeatherSize , darkFeatherSize , 225, 315, PIE);
+arc(tailX, tailY-30, darkFeatherSize , darkFeatherSize , tailArcStart, tailArcEnd, PIE);
 
-arc(tailX, tailY-45, darkFeatherSize , darkFeatherSize , 225, 315, PIE);
+arc(tailX, tailY-45, darkFeatherSize , darkFeatherSize , tailArcStart, tailArcEnd, PIE);
 
-arc(tailX, tailY-60, darkFeatherSize , darkFeatherSize , 225, 315, PIE);
+arc(tailX, tailY-60, darkFeatherSize , darkFeatherSize , tailArcStart, tailArcEnd, PIE);
 }
 
