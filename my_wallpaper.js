@@ -1,43 +1,43 @@
-
 //your parameter variables go here!
 
-let headX = 50 // moves the entire head and beack on X axis
-let headY = 90 // moves the entire head and beack on Y axis
+let headX = 50 // 50 // moves the entire head and beack on X axis
+let headY = 90 // 90 //moves the entire head and beack on Y axis
 
-let headSize = 43 //width and height of the head, excluding beak
-let eyeSize = 10 // width and height of the eye
+let headSize = 43 // 43 // width and height of the head, excluding beak
+let eyeSize = 10 // 10// width and height of the eye
 
-let featherX = 105.5 // moves both the colourful and dark feathers on body X axis
-let featherY = 90 // moves both the colourful and dark feathers on body Y axis
+let featherX = 105.5 // 105.5 // moves both the colourful and dark feathers on body X axis
+let featherY = 90 // 90 // moves both the colourful and dark feathers on body Y axis
 
-let featherWidth = 68 // width of colourful body feathers
-let featherHeight = 62.5 //head of colourful body feathers
+let featherWidth = 68 // 68 // width of colourful body feathers
+let featherHeight = 62.5 // 62.5 // head of colourful body feathers
 
-let darkFeatherSize = 30 // width & height of the 5 small dark body feathers
-let darkFeatherColour = 40 // colour of all of the dark feathers (body & tail) & top of beak
+let darkFeatherSize = 30 // 30 // width & height of the 5 small dark body feathers
+let darkFeatherColour = 40 // 40 // colour of all of the dark feathers (body & tail) & top of beak
 
-let featherArcStart = 90 // the degree where my body feather begin
-let featherArcEnd = 180 // the degree where my body feather end
+let featherArcStart = 90 // 90 // the degree where my body feather begin
+let featherArcEnd = 180 // 180 // the degree where my body feather end
 
-let tailX = 139.5; // the X point where the stright line tail feathers and the big tail on top starts from.
-let tailY = 91; // the Y point where the stright line tail feathers and the big tail on top starts from.
+let tailX = 139.5; // 139.5 // the X point where the stright line tail feathers and the big tail on top starts from.
+let tailY = 91; // 91 // the Y point where the stright line tail feathers and the big tail on top starts from.
 
-let tailWidth = 140 // width of the tail
-let tailHeight = 150 // height of the tail
+let tailWidth = 140 // 140 // width of the tail
+let tailHeight = 150 // 150 // height of the tail
 
-let tailArcStart = 225 // the degree where the tail starts
-let tailArcEnd = 315 //the degree where the tail end
+let tailArcStart = 225 // 225 // the degree where the tail starts
+let tailArcEnd = 315 // 315 // the degree where the tail end
 
-let lightCream = [219, 216, 189]; // middle of the head, and the tail
-let navy = [47, 61, 82] // the head and one of the body wfathers
-let darkPink = [88, 71, 92] // the tail, and one of the feathers
-let bodyColour = [189, 184, 152] // the body and the bottom half of the beak
-
+let lightCream = [219, 216, 189]; // middle of the head, and the tail // 219, 216, 189
+let navy = [47, 61, 82] // the head and one of the body feathers // 47, 61, 82
+let darkPink = [88, 71, 92] // the tail, and one of the feathers // 88, 71, 92
+let bodyColour = [189, 184, 152] // the body and the bottom half of the beak // 189, 184, 152
+let plantColour = [151, 181, 150] // 151, 181, 150
+let backgroundColour = [56, 108, 125] //56, 108, 125
 
 
 function setup_wallpaper(pWallpaper) {
  pWallpaper.output_mode(DEVELOP_GLYPH);
- //pWallpaper.output_mode(GRID_WALLPAPER);
+ pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(FIT_TO_SCREEN);
  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
@@ -45,21 +45,57 @@ function setup_wallpaper(pWallpaper) {
  //Grid settings
  pWallpaper.grid_settings.cell_width  = 200;
  pWallpaper.grid_settings.cell_height = 200;
- pWallpaper.grid_settings.row_offset  = 100;
+ pWallpaper.grid_settings.row_offset  = 50;
 }
-
 
 function wallpaper_background() {
 
- background(56, 108, 125); //teal
+ background(backgroundColour); //teal
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
+drawFantail(0, 0, 1)
+}
+
+function drawFantail(x, y, s) {
+  translate(x, y);
+  scale(s);
+
+// tree
+stroke(plantColour)
+strokeWeight(8)
+line(30,20,30,180)
+
+fill(plantColour) // leaf on the tree
+arc(50,40, 20,20,45,225, PIE);
+beginShape()
+vertex(45,31)
+vertex(60,30)
+vertex(59,45)
+endShape()
+
+arc(176,175,20,20,315,135, PIE); // leaf on the ground
+beginShape()
+vertex(167,180)
+vertex(167,165)
+vertex(180,165)
+endShape()
+
+strokeWeight(3) // the three leaf stems
+line(45,45,30,60)
+line(30,75,15,60)
+line(176,175,192,192)
+
 //shadow
-noStroke()
-fill(47, 94, 110)
-ellipse(105,176,80,20)
+
+noStroke();
+if (eyeSize > 10) {
+  fill(plantColour); // conditional shadow colour
+} else {
+  fill(47, 94, 110); // original shadow colour
+}
+ellipse(105, 176, 80, 20);
 
  //beak
 noStroke()
@@ -76,13 +112,21 @@ arc(105, 90, 125, 125, 0, 180, PIE);
 
 //head
 
-fill(navy) 
-circle(headX,headY,headSize,headSize)
+if (headSize > 45) {
+  fill(45, 77, 60); // dark green
+} else {
+  fill(navy); // original navy
+}
+circle(headX, headY, headSize, headSize);
 
 fill(lightCream)
 circle (headX,headY,headSize-13,headSize-13)
 
-fill(navy) 
+if (headSize > 45) {
+  fill(45, 77, 60); // dark green
+} else {
+  fill(navy); // original navy
+}
 circle(headX,headY,headSize-23,headSize-23)
 
 //eye
@@ -127,6 +171,7 @@ arc(featherX+68, featherY, darkFeatherSize , darkFeatherSize , featherArcStart, 
 
 //black tail lines
 stroke(0)
+strokeWeight(1)
 line(tailX,tailY,tailX+52,tailY)
 
 line(tailX,tailY+3,tailX+34,tailY+3)
@@ -156,6 +201,12 @@ line(102,153,102,175)
 line(108,153,108,175)
 
 //tail
+
+// Adjust tail arc angles based on feather arc start
+if (featherArcStart < 90) {
+  tailArcStart = 205;
+  tailArcEnd = 335;
+}
 
 noStroke()
 
