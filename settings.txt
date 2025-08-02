@@ -340,3 +340,217 @@ function setup_wallpaper(pWallpaper) {
 
 
 Wallpaper 7:
+
+
+//your parameter variables go here!
+
+let headX = 30 // 50 // moves the entire head and beack on X axis
+let headY = 90 // 90 //moves the entire head and beack on Y axis
+
+let headSize = 78 // 43 // width and height of the head, excluding beak
+let eyeSize = 40 // 10// width and height of the eye
+
+let featherX = 130.5 // 105.5 // moves both the colourful and dark feathers on body X axis
+let featherY = 90 // 90 // moves both the colourful and dark feathers on body Y axis
+
+let featherWidth = 75 // 68 // width of colourful body feathers
+let featherHeight = 35.5 // 62.5 // head of colourful body feathers
+
+let darkFeatherSize = 20 // 30 // width & height of the 5 small dark body feathers
+let darkFeatherColour = 50 // 40 // colour of all of the dark feathers (body & tail) & top of beak
+
+let featherArcStart = 85 // 90 // the degree where my body feather begin
+let featherArcEnd = 180 // 180 // the degree where my body feather end
+
+let tailX = 139.5; // 139.5 // the X point where the stright line tail feathers and the big tail on top starts from.
+let tailY = 91; // 91 // the Y point where the stright line tail feathers and the big tail on top starts from.
+
+let tailWidth = 140 // 140 // width of the tail
+let tailHeight = 130 // 150 // height of the tail
+
+let tailArcStart = 225 // 225 // the degree where the tail starts
+let tailArcEnd = 315 // 315 // the degree where the tail end
+
+let lightCream = [219, 216, 189]; // middle of the head, and the tail // 219, 216, 189
+let navy = [47, 61, 82] // the head and one of the body feathers // 47, 61, 82
+let darkPink = [88, 71, 92] // the tail, and one of the feathers // 88, 71, 92
+let bodyColour = [189, 184, 152] // the body and the bottom half of the beak // 189, 184, 152
+let plantColour = [151, 181, 150] // 151, 181, 150
+let backgroundColour = [200, 225, 230] //56, 108, 125
+
+
+function setup_wallpaper(pWallpaper) {
+ pWallpaper.output_mode(DEVELOP_GLYPH);
+ pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(FIT_TO_SCREEN);
+ pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+
+ //Grid settings
+ pWallpaper.grid_settings.cell_width  = 200;
+ pWallpaper.grid_settings.cell_height = 200;
+ pWallpaper.grid_settings.row_offset  = 50;
+}
+//your parameter variables go here!
+
+let headX = 30 // 50 // moves the entire head and beack on X axis
+let headY = 90 // 90 //moves the entire head and beack on Y axis
+
+let headSize = 78 // 43 // width and height of the head, excluding beak
+let eyeSize = 40 // 10// width and height of the eye
+
+let featherX = 130.5 // 105.5 // moves both the colourful and dark feathers on body X axis
+let featherY = 90 // 90 // moves both the colourful and dark feathers on body Y axis
+
+let featherWidth = 75 // 68 // width of colourful body feathers
+let featherHeight = 35.5 // 62.5 // head of colourful body feathers
+
+let darkFeatherSize = 20 // 30 // width & height of the 5 small dark body feathers
+let darkFeatherColour = 50 // 40 // colour of all of the dark feathers (body & tail) & top of beak
+
+let featherArcStart = 85 // 90 // the degree where my body feather begin
+let featherArcEnd = 180 // 180 // the degree where my body feather end
+
+let tailX = 139.5; // 139.5 // the X point where the stright line tail feathers and the big tail on top starts from.
+let tailY = 91; // 91 // the Y point where the stright line tail feathers and the big tail on top starts from.
+
+let tailWidth = 140 // 140 // width of the tail
+let tailHeight = 130 // 150 // height of the tail
+
+let tailArcStart = 225 // 225 // the degree where the tail starts
+let tailArcEnd = 315 // 315 // the degree where the tail end
+
+let lightCream = [219, 216, 189]; // middle of the head, and the tail // 219, 216, 189
+let navy = [47, 61, 82] // the head and one of the body feathers // 47, 61, 82
+let darkPink = [84, 60, 54] // the tail, and one of the feathers // 88, 71, 92
+let bodyColour = [189, 184, 152] // the body and the bottom half of the beak // 189, 184, 152
+let plantColour = [151, 181, 150] // 151, 181, 150
+let backgroundColour = [200, 225, 230] //56, 108, 125
+
+
+function setup_wallpaper(pWallpaper) {
+ pWallpaper.output_mode(DEVELOP_GLYPH);
+ pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(FIT_TO_SCREEN);
+ pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+
+ //Grid settings
+ pWallpaper.grid_settings.cell_width  = 200;
+ pWallpaper.grid_settings.cell_height = 200;
+ pWallpaper.grid_settings.row_offset  = 50;
+}
+
+
+/////////////////////////////////
+
+
+
+Wallpaper 8:
+
+//your parameter variables go here!
+
+let headX = 35 // 50 // moves the entire head and beack on X axis
+let headY = 100 // 90 //moves the entire head and beack on Y axis
+
+let headSize = 43 // 43 // width and height of the head, excluding beak
+let eyeSize = 10 // 10// width and height of the eye
+
+let featherX = 105.5 // 105.5 // moves both the colourful and dark feathers on body X axis
+let featherY = 90 // 90 // moves both the colourful and dark feathers on body Y axis
+
+let featherWidth = 68 // 68 // width of colourful body feathers
+let featherHeight = 120.5 // 62.5 // head of colourful body feathers
+
+let darkFeatherSize = 30 // 30 // width & height of the 5 small dark body feathers
+let darkFeatherColour = 40 // 40 // colour of all of the dark feathers (body & tail) & top of beak
+
+let featherArcStart = 90 // 90 // the degree where my body feather begin
+let featherArcEnd = 200 // 180 // the degree where my body feather end
+
+let tailX = 154.5; // 139.5 // the X point where the stright line tail feathers and the big tail on top starts from.
+let tailY = 130; // 91 // the Y point where the stright line tail feathers and the big tail on top starts from.
+
+let tailWidth = 140 // 140 // width of the tail
+let tailHeight = 300 // 150 // height of the tail
+
+let tailArcStart = 225 // 225 // the degree where the tail starts
+let tailArcEnd = 315 // 315 // the degree where the tail end
+
+let lightCream = [145, 106, 123]; // middle of the head, and the tail // 219, 216, 189
+let navy = [47, 61, 82] // the head and one of the body feathers // 47, 61, 82
+let darkPink = [88, 71, 92] // the tail, and one of the feathers // 88, 71, 92
+let bodyColour = [189, 184, 152] // the body and the bottom half of the beak // 189, 184, 152
+let plantColour = [189, 184, 152] // 151, 181, 150
+let backgroundColour = [145, 106, 123] //56, 108, 125
+
+
+function setup_wallpaper(pWallpaper) {
+ pWallpaper.output_mode(DEVELOP_GLYPH);
+ pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(FIT_TO_SCREEN);
+ pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+
+ //Grid settings
+ pWallpaper.grid_settings.cell_width  = 200;
+ pWallpaper.grid_settings.cell_height = 200;
+ pWallpaper.grid_settings.row_offset  = 100;
+}
+
+
+/////////////////////////////////
+
+
+
+Wallpaper 9:
+
+//your parameter variables go here!
+
+let headX = 170 // 50 // moves the entire head and beack on X axis
+let headY = 75 // 90 //moves the entire head and beack on Y axis
+
+let headSize = 33 // 43 // width and height of the head, excluding beak
+let eyeSize = 13 // 10// width and height of the eye
+
+let featherX = 90.5 // 105.5 // moves both the colourful and dark feathers on body X axis
+let featherY = 105 // 90 // moves both the colourful and dark feathers on body Y axis
+
+let featherWidth = 68 // 68 // width of colourful body feathers
+let featherHeight = 62.5 // 62.5 // head of colourful body feathers
+
+let darkFeatherSize = 40 // 30 // width & height of the 5 small dark body feathers
+let darkFeatherColour = [125, 87, 107] // 40 // colour of all of the dark feathers (body & tail) & top of beak
+
+let featherArcStart = 160 // 90 // the degree where my body feather begin
+let featherArcEnd = 180 // 180 // the degree where my body feather end
+
+let tailX = 80.5; // 139.5 // the X point where the stright line tail feathers and the big tail on top starts from.
+let tailY = 91; // 91 // the Y point where the stright line tail feathers and the big tail on top starts from.
+
+let tailWidth = 140 // 140 // width of the tail
+let tailHeight = 190 // 150 // height of the tail
+
+let tailArcStart = 264 // 225 // the degree where the tail starts
+let tailArcEnd = 290 // 315 // the degree where the tail end
+
+let lightCream = [219, 216, 189]; // middle of the head, and the tail // 219, 216, 189
+let navy = [47, 61, 82] // the head and one of the body feathers // 47, 61, 82
+let darkPink = [88, 71, 92] // the tail, and one of the feathers // 88, 71, 92
+let bodyColour = [128, 164, 191] // the body and the bottom half of the beak // 189, 184, 152
+let plantColour = [125, 87, 107] // 151, 181, 150
+let backgroundColour = [66, 39, 50] //56, 108, 125
+
+
+function setup_wallpaper(pWallpaper) {
+ pWallpaper.output_mode(DEVELOP_GLYPH);
+ pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(FIT_TO_SCREEN);
+ pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+
+ //Grid settings
+ pWallpaper.grid_settings.cell_width  = 200;
+ pWallpaper.grid_settings.cell_height = 200;
+ pWallpaper.grid_settings.row_offset  = 80;
+}
