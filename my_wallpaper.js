@@ -35,10 +35,10 @@ let plantColour = [151, 181, 150] // 151, 181, 150
 let backgroundColour = [56, 108, 125] //56, 108, 125
 
 
-function setup_wallpaper(pWallpaper) {
+ function setup_wallpaper(pWallpaper) {
  pWallpaper.output_mode(DEVELOP_GLYPH);
  pWallpaper.output_mode(GLIDE_WALLPAPER);
-  pWallpaper.resolution(A3);
+  pWallpaper.resolution(FIT_TO_SCREEN);
  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
 
@@ -54,6 +54,7 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+
 
 drawFantail(0, 0, 1)
 }
